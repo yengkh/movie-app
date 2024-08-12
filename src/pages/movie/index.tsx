@@ -1,16 +1,25 @@
+import { useNavigate } from "react-router-dom";
 import { Movies } from "../../assets/movies/movies";
 import BookMark from "../home/BookMark";
 import MovieDetail from "../home/MovieDetail";
 
 const MovicePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="px-2">
       <p>Movies</p>
       <div className="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-2 md:m-4">
         {Movies.map((items) => (
-          <div key={items.id} className="relative">
-            <BookMark />
-            <div className="overflow-hidden rounded-md">
+          <div key={items.id} className="relative cursor-pointer">
+            <BookMark items={items} />
+            <div
+              className="overflow-hidden rounded-md"
+              onClick={() =>
+                navigate(
+                  `/movie-detail/${encodeURIComponent(items.movie_name)}`
+                )
+              }
+            >
               <img
                 src={items.movie_image}
                 alt=""

@@ -5,6 +5,7 @@ import TVSeries from "./pages/tv-series";
 import BookMarkPage from "./pages/bookmark";
 import ButtonLinkComponent from "./components/ButtonLinkComponent";
 import { useRef, useState } from "react";
+import DetailPage from "./detailpage";
 
 const App = () => {
   const [menu, setMenu] = useState<boolean>(false);
@@ -147,6 +148,7 @@ const App = () => {
               <Route path="/movie" element={<MovicePage />} />
               <Route path="/tv-series" element={<TVSeries />} />
               <Route path="/bookmark" element={<BookMarkPage />} />
+              <Route path="/movie-detail/:moviename" element={<DetailPage />} />
             </Routes>
           </div>
         </div>

@@ -1,11 +1,33 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToFavorite } from "../../redux/AddToFavorite";
+import { TopViewTypes } from "../../types/types";
+type Props = {
+  items: TopViewTypes;
+};
 
-const BookMark = () => {
+const BookMark = ({ items }: Props) => {
+  const dispath = useDispatch();
   const [bookMark, setBookMark] = useState<boolean>(true);
+  const handleAddToFavorite = () => {
+    dispath(
+      addToFavorite({
+        id: items.id,
+        moive_viewer: items.moive_viewer,
+        movie_category: items.movie_category,
+        movie_image: items.movie_image,
+        movie_type: items.movie_type,
+        movie_year: items.movie_year,
+        movie_name: items.movie_name,
+      })
+    );
+    localStorage.setItem("movie_favorite", JSON.stringify(items));
+    setBookMark(!bookMark);
+  };
   return (
     <button
-      className="p-1 lg:p-2 bg-containerBackgroundColor rounded-full absolute right-2 top-2 z-10 opacity-70"
-      onClick={() => setBookMark(!bookMark)}
+      className="p-2 bg-containerBackgroundColor rounded-full absolute right-2 top-2 z-10 opacity-70"
+      onClick={handleAddToFavorite}
     >
       {bookMark ? (
         <svg
@@ -14,7 +36,7 @@ const BookMark = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="size-3 md:size-4 lg:size-5"
+          className="size-4 lg:size-5"
         >
           <path
             strokeLinecap="round"
@@ -27,7 +49,7 @@ const BookMark = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-3 md:size-4 lg:size-5"
+          className="size-4 lg:size-5"
         >
           <path
             fillRule="evenodd"
