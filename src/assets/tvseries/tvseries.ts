@@ -1,0 +1,118 @@
+import { TopViewTypes } from "../../types/types";
+import sweethome from "./GG25zAj4rXve.webp";
+import walkingdeaths1 from "./TheWalkingDeadPosters1.jpg";
+import walkingdeaths2 from "./ws2.jpg";
+import walkingdeaths3 from "./TWD_FINAL_KEY_ART_embeds3.webp";
+import walkingdeaths4 from "./Walking_Dead_S4_Posters4.jpg";
+import walkingdeaths5 from "./Walking_Dead_Season_5_Poster.jpg";
+
+export const TVSeriesImage: Array<TopViewTypes> = [
+  {
+    id: "tv-1",
+    moive_viewer: 1200,
+    movie_category: "H",
+    movie_image: sweethome,
+    movie_name: "Sweet Home S1",
+    movie_type: "tv",
+    movie_year: 2023,
+  },
+  {
+    id: "tv-2",
+    moive_viewer: 1300,
+    movie_category: "H",
+    movie_image: sweethome,
+    movie_name: "Sweet Home S2",
+    movie_type: "tv",
+    movie_year: 2023,
+  },
+  {
+    id: "tv-3",
+    moive_viewer: 1700,
+    movie_category: "H",
+    movie_image: sweethome,
+    movie_name: "Sweet Home S3",
+    movie_type: "tv",
+    movie_year: 2023,
+  },
+  {
+    id: "tv-4",
+    moive_viewer: 1100,
+    movie_category: "H",
+    movie_image: sweethome,
+    movie_name: "Sweet Home S4",
+    movie_type: "tv",
+    movie_year: 2023,
+  },
+  {
+    id: "tv-5",
+    moive_viewer: 1200,
+    movie_category: "H",
+    movie_image: sweethome,
+    movie_name: "Sweet Home S5",
+    movie_type: "tv",
+    movie_year: 2023,
+  },
+  {
+    id: "tv-6",
+    moive_viewer: 1800,
+    movie_category: "H",
+    movie_image: walkingdeaths1,
+    movie_name: "Walking Dead S1",
+    movie_type: "tv",
+    movie_year: 2015,
+  },
+  {
+    id: "tv-7",
+    moive_viewer: 1300,
+    movie_category: "H",
+    movie_image: walkingdeaths2,
+    movie_name: "Walking Dead S2",
+    movie_type: "tv",
+    movie_year: 2015,
+  },
+  {
+    id: "tv-8",
+    moive_viewer: 1500,
+    movie_category: "H",
+    movie_image: walkingdeaths3,
+    movie_name: "Walking Dead S3",
+    movie_type: "tv",
+    movie_year: 2016,
+  },
+  {
+    id: "tv-9",
+    moive_viewer: 1800,
+    movie_category: "H",
+    movie_image: walkingdeaths4,
+    movie_name: "Walking Dead S4",
+    movie_type: "tv",
+    movie_year: 2016,
+  },
+  {
+    id: "tv-10",
+    moive_viewer: 1800,
+    movie_category: "H",
+    movie_image: walkingdeaths5,
+    movie_name: "Walking Dead S5",
+    movie_type: "tv",
+    movie_year: 2016,
+  },
+  {
+    id: "tv-11",
+    moive_viewer: 1550,
+    movie_category: "H",
+    movie_image: walkingdeaths1,
+    movie_name: "Walking Dead S6",
+    movie_type: "tv",
+    movie_year: 2017,
+  },
+  {
+    id: "tv-12",
+    moive_viewer: 1700,
+    movie_category: "H",
+    movie_image: walkingdeaths3,
+    movie_name: "Walking Dead S7",
+    movie_type: "tv",
+    movie_year: 2017,
+  },
+];
