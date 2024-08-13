@@ -50,7 +50,7 @@ export const Movies: Array<TopViewTypes> = [
     moive_viewer: 1000,
     movie_category: "E",
     movie_image: pixels,
-    movie_name: "Pixels",
+    movie_name: "Pixels2",
     movie_type: "Movie",
     movie_year: 2018,
     movie_link: movielink,
