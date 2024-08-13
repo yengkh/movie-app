@@ -6,4 +6,5 @@ export interface TopViewTypes {
   movie_type: string;
   movie_category: string;
   moive_viewer: number;
+  movie_link: string;
 }

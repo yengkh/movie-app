@@ -5,6 +5,7 @@ import walkingdeaths2 from "./ws2.jpg";
 import walkingdeaths3 from "./TWD_FINAL_KEY_ART_embeds3.webp";
 import walkingdeaths4 from "./Walking_Dead_S4_Posters4.jpg";
 import walkingdeaths5 from "./Walking_Dead_Season_5_Poster.jpg";
+import movielink from "../video/Avatar- The Way of Water - Official Trailer.mp4";
 
 export const TVSeriesImage: Array<TopViewTypes> = [
   {
@@ -15,6 +16,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Sweet Home S1",
     movie_type: "tv",
     movie_year: 2023,
+    movie_link: movielink,
   },
   {
     id: "tv-2",
@@ -24,6 +26,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Sweet Home S2",
     movie_type: "tv",
     movie_year: 2023,
+    movie_link: movielink,
   },
   {
     id: "tv-3",
@@ -33,6 +36,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Sweet Home S3",
     movie_type: "tv",
     movie_year: 2023,
+    movie_link: movielink,
   },
   {
     id: "tv-4",
@@ -42,6 +46,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Sweet Home S4",
     movie_type: "tv",
     movie_year: 2023,
+    movie_link: movielink,
   },
   {
     id: "tv-5",
@@ -51,6 +56,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Sweet Home S5",
     movie_type: "tv",
     movie_year: 2023,
+    movie_link: movielink,
   },
   {
     id: "tv-6",
@@ -60,6 +66,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Walking Dead S1",
     movie_type: "tv",
     movie_year: 2015,
+    movie_link: movielink,
   },
   {
     id: "tv-7",
@@ -69,6 +76,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Walking Dead S2",
     movie_type: "tv",
     movie_year: 2015,
+    movie_link: movielink,
   },
   {
     id: "tv-8",
@@ -78,6 +86,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Walking Dead S3",
     movie_type: "tv",
     movie_year: 2016,
+    movie_link: movielink,
   },
   {
     id: "tv-9",
@@ -87,6 +96,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Walking Dead S4",
     movie_type: "tv",
     movie_year: 2016,
+    movie_link: movielink,
   },
   {
     id: "tv-10",
@@ -96,6 +106,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Walking Dead S5",
     movie_type: "tv",
     movie_year: 2016,
+    movie_link: movielink,
   },
   {
     id: "tv-11",
@@ -105,6 +116,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Walking Dead S6",
     movie_type: "tv",
     movie_year: 2017,
+    movie_link: movielink,
   },
   {
     id: "tv-12",
@@ -114,5 +126,6 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Walking Dead S7",
     movie_type: "tv",
     movie_year: 2017,
+    movie_link: movielink,
   },
 ];

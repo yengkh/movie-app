@@ -1,10 +1,12 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux";
 import MovieDetail from "../home/MovieDetail";
 import RemoveBookMark from "./RemoveBookMark";
 import { useNavigate } from "react-router-dom";
+import { changeActiveLink } from "../../redux/SetActiveLink";
 
 const BookMarkPage = () => {
+  const dispath = useDispatch();
   const navigate = useNavigate();
   const movieItem = useSelector((store: RootState) => store.movie.items);
   if (movieItem.length === 0) {
@@ -38,7 +40,10 @@ const BookMarkPage = () => {
             <RemoveBookMark id={items.id} />
             <div
               className="overflow-hidden rounded-md"
-              onClick={() => navigate(`/movie-detail/${items.movie_name}`)}
+              onClick={() => {
+                navigate(`/movie-detail/${items.movie_name}`);
+                dispath(changeActiveLink(""));
+              }}
             >
               <img
                 src={items.movie_image}

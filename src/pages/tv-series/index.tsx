@@ -2,8 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { TVSeriesImage } from "../../assets/tvseries/tvseries";
 import BookMark from "../home/BookMark";
 import MovieDetail from "../home/MovieDetail";
+import { useDispatch } from "react-redux";
+import { changeActiveLink } from "../../redux/SetActiveLink";
 
 const TVSeries = () => {
+  const dispath = useDispatch();
   const navigate = useNavigate();
   return (
     <div className="px-2">
@@ -14,7 +17,10 @@ const TVSeries = () => {
             <BookMark items={items} />
             <div
               className="overflow-hidden rounded-md"
-              onClick={() => navigate(`/movie-detail/${items.movie_name}`)}
+              onClick={() => {
+                navigate(`/movie-detail/${items.movie_name}`);
+                dispath(changeActiveLink(""));
+              }}
             >
               <img
                 src={items.movie_image}

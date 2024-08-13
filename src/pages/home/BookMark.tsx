@@ -19,6 +19,7 @@ const BookMark = ({ items }: Props) => {
         movie_type: items.movie_type,
         movie_year: items.movie_year,
         movie_name: items.movie_name,
+        movie_link: items.movie_link,
       })
     );
     localStorage.setItem("movie_favorite", JSON.stringify(items));

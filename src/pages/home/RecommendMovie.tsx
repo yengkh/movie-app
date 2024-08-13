@@ -5,8 +5,11 @@ import { topViewMovie } from "../../assets/topview/topview";
 import MovieDetail from "./MovieDetail";
 import BookMark from "./BookMark";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { changeActiveLink } from "../../redux/SetActiveLink";
 
 const RecommendMovie = () => {
+  const dispath = useDispatch();
   const allMovies: Array<TopViewTypes> = [
     ...Movies,
     ...topViewMovie,
@@ -21,11 +24,12 @@ const RecommendMovie = () => {
             <BookMark items={items} />
             <div
               className="overflow-hidden rounded-md"
-              onClick={() =>
+              onClick={() => {
                 navigate(
                   `/movie-detail/${encodeURIComponent(items.movie_name)}`
-                )
-              }
+                );
+                dispath(changeActiveLink(""));
+              }}
             >
               <img
                 src={items.movie_image}

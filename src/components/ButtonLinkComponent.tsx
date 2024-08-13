@@ -1,27 +1,28 @@
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { RootState } from "../redux";
+import { changeActiveLink } from "../redux/SetActiveLink";
+
 type Props = {
   linkAddress: string;
   iconPath: string;
   title: string;
-  activeLink: string;
-  setActiveLink: (link: string) => void;
 };
 
-const ButtonLinkComponent = ({
-  linkAddress,
-  iconPath,
-  title,
-  activeLink,
-  setActiveLink,
-}: Props) => {
+const ButtonLinkComponent = ({ linkAddress, iconPath, title }: Props) => {
+  const activeLink = useSelector(
+    (state: RootState) => state.setActiveLinkSlice.activeLink
+  );
+  const dispatch = useDispatch();
+
   return (
     <Link to={linkAddress}>
       <button
         type="button"
         className={`${
           activeLink === title ? "bg-bodyBackgroundColor" : ""
-        } flex gap-2 md:w-36 w-44 lg:w-52 py-2 rounded-md pl-[5px] hover:bg-bodyBackgroundColor`}
-        onClick={() => setActiveLink(title)}
+        } flex gap-2 md:w-36 w-44 xl:w-52 py-2 rounded-md pl-[5px] hover:bg-bodyBackgroundColor`}
+        onClick={() => dispatch(changeActiveLink(title))}
       >
         <span>
           <svg

@@ -5,6 +5,7 @@ import image3 from "./junglecruise.jpeg";
 import image4 from "./luca.jpeg";
 import image5 from "./pixels.jpg";
 import image6 from "./sing.jpg";
+import movielink from "../video/Avatar- The Way of Water - Official Trailer.mp4";
 
 export const topViewMovie: Array<TopViewTypes> = [
   {
@@ -15,6 +16,7 @@ export const topViewMovie: Array<TopViewTypes> = [
     movie_type: "Movie",
     movie_category: "PG",
     moive_viewer: 2500,
+    movie_link: movielink,
   },
   {
     id: "topview-2",
@@ -24,15 +26,17 @@ export const topViewMovie: Array<TopViewTypes> = [
     movie_type: "Movie",
     movie_category: "E",
     moive_viewer: 3500,
+    movie_link: movielink,
   },
   {
     id: "topview-3",
     movie_year: 2020,
-    movie_name: "Junglecruise",
+    movie_name: "Jungle cruise",
     movie_image: image3,
     movie_type: "Movie",
     movie_category: "18+",
     moive_viewer: 2000,
+    movie_link: movielink,
   },
   {
     id: "topview-4",
@@ -42,6 +46,7 @@ export const topViewMovie: Array<TopViewTypes> = [
     movie_type: "Movie",
     movie_category: "E",
     moive_viewer: 3450,
+    movie_link: movielink,
   },
   {
     id: "topview-5",
@@ -51,14 +56,16 @@ export const topViewMovie: Array<TopViewTypes> = [
     movie_type: "Movie",
     movie_category: "18+",
     moive_viewer: 1700,
+    movie_link: movielink,
   },
   {
     id: "topview-6",
     movie_year: 2020,
-    movie_name: "Sing",
+    movie_name: "Sing 2",
     movie_image: image6,
     movie_type: "TV Series",
     movie_category: "E",
     moive_viewer: 1600,
+    movie_link: movielink,
   },
 ];
