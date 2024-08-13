@@ -28,7 +28,7 @@ const MovieDetailPath = ({ items }: Props) => {
   };
   const [showDialog, setShowdialog] = useState<boolean>(false);
   return (
-    <div className="w-[98%] lg:w-[70%] flex flex-col gap-5 mx-auto">
+    <div className="w-[90%] lg:w-[70%] flex flex-col gap-5 mx-auto">
       <div className="flex gap-10 justify-center items-center mt-5">
         <button
           className="bg-containerBackgroundColor w-40 rounded-md py-2 flex items-center justify-center gap-2"
