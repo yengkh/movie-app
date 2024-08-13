@@ -12,6 +12,7 @@ import jungle from "./p_junglecruise_21740_v2_bb7f0ae4.jpeg";
 import inception from "./inception.jpeg";
 import kingdonoftheapes from "./KingdomofthePlanetoftheApes3000.jpg";
 import movielink from "../video/Avatar- The Way of Water - Official Trailer.mp4";
+import movielink2 from "../video/THE GARFIELD MOVIE - Official Trailer (HD).mp4";
 
 export const Movies: Array<TopViewTypes> = [
   {
@@ -22,7 +23,7 @@ export const Movies: Array<TopViewTypes> = [
     movie_name: "The Garfield",
     movie_type: "Movie",
     movie_year: 2020,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "movie-2",
@@ -42,7 +43,7 @@ export const Movies: Array<TopViewTypes> = [
     movie_name: "Adam Driver",
     movie_type: "Movie",
     movie_year: 2023,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "movie-4",
@@ -62,7 +63,7 @@ export const Movies: Array<TopViewTypes> = [
     movie_name: "Book Worm",
     movie_type: "Movie",
     movie_year: 2024,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "movie-6",
@@ -82,7 +83,7 @@ export const Movies: Array<TopViewTypes> = [
     movie_name: "Hanu Man",
     movie_type: "PG",
     movie_year: 2024,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "movie-8",
@@ -102,7 +103,7 @@ export const Movies: Array<TopViewTypes> = [
     movie_name: "Cruella",
     movie_type: "Movie",
     movie_year: 2021,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "movie-10",
@@ -122,7 +123,7 @@ export const Movies: Array<TopViewTypes> = [
     movie_name: "Inception",
     movie_type: "Movie",
     movie_year: 2010,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "movie-12",
@@ -132,6 +133,6 @@ export const Movies: Array<TopViewTypes> = [
     movie_name: "Kingdom of apes",
     movie_type: "Movie",
     movie_year: 2024,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
 ];

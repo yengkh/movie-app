@@ -6,6 +6,7 @@ import image4 from "./luca.jpeg";
 import image5 from "./pixels.jpg";
 import image6 from "./sing.jpg";
 import movielink from "../video/Avatar- The Way of Water - Official Trailer.mp4";
+import movielink2 from "../video/THE GARFIELD MOVIE - Official Trailer (HD).mp4";
 
 export const topViewMovie: Array<TopViewTypes> = [
   {
@@ -26,7 +27,7 @@ export const topViewMovie: Array<TopViewTypes> = [
     movie_type: "Movie",
     movie_category: "E",
     moive_viewer: 3500,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "topview-3",
@@ -36,7 +37,7 @@ export const topViewMovie: Array<TopViewTypes> = [
     movie_type: "Movie",
     movie_category: "18+",
     moive_viewer: 2000,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "topview-4",
@@ -56,7 +57,7 @@ export const topViewMovie: Array<TopViewTypes> = [
     movie_type: "Movie",
     movie_category: "18+",
     moive_viewer: 1700,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "topview-6",

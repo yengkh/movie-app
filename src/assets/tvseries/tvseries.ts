@@ -6,6 +6,7 @@ import walkingdeaths3 from "./TWD_FINAL_KEY_ART_embeds3.webp";
 import walkingdeaths4 from "./Walking_Dead_S4_Posters4.jpg";
 import walkingdeaths5 from "./Walking_Dead_Season_5_Poster.jpg";
 import movielink from "../video/Avatar- The Way of Water - Official Trailer.mp4";
+import movielink2 from "../video/THE GARFIELD MOVIE - Official Trailer (HD).mp4";
 
 export const TVSeriesImage: Array<TopViewTypes> = [
   {
@@ -26,7 +27,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Sweet Home S2",
     movie_type: "tv",
     movie_year: 2023,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "tv-3",
@@ -56,7 +57,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Sweet Home S5",
     movie_type: "tv",
     movie_year: 2023,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "tv-6",
@@ -66,7 +67,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Walking Dead S1",
     movie_type: "tv",
     movie_year: 2015,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "tv-7",
@@ -86,7 +87,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Walking Dead S3",
     movie_type: "tv",
     movie_year: 2016,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "tv-9",
@@ -106,7 +107,7 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Walking Dead S5",
     movie_type: "tv",
     movie_year: 2016,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
   {
     id: "tv-11",
@@ -126,6 +127,6 @@ export const TVSeriesImage: Array<TopViewTypes> = [
     movie_name: "Walking Dead S7",
     movie_type: "tv",
     movie_year: 2017,
-    movie_link: movielink,
+    movie_link: movielink2,
   },
 ];
