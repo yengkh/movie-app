@@ -40,12 +40,12 @@ const DetailPage = () => {
     );
   }
   return (
-    <div className="m-2">
+    <div className="p-2 overflow-x-hidden">
       <p className="font-bold">Trailer</p>
       <div className="flex justify-center items-center mt-5 md:pr-7 xl:w-5/6 lg:mx-auto ">
         {movie.map((items) => (
-          <div key={items.id}>
-            <video controls className="rounded-sm">
+          <div key={items.id} className="px-2">
+            <video controls className="rounded-sm mx-2">
               <source src={items.movie_link} />
             </video>
             <div className="mt-10 flex flex-col lg:flex-row  gap-8">

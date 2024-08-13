@@ -72,7 +72,7 @@ const App = () => {
             <p className="hidden md:block font-bold">My Movie</p>
           </div>
           {/* Right Path */}
-          <div className="flex items-center justify-between gap-1 w-5/6 md:gap-5 md:w-[70%] lg:w-[80%] lg:pr-10 ">
+          <div className="flex items-center justify-around md:justify-between gap-1 w-5/6 md:gap-5 md:w-[70%] lg:w-[80%] lg:pr-10 ">
             <Link
               to={"/search-movie"}
               onClick={() => dispath(changeActiveLink(""))}
@@ -81,7 +81,7 @@ const App = () => {
                 <input
                   type="text"
                   placeholder="Search..."
-                  className="py-[2px] md:py-1 md:w-[300px] md:ml-3 px-2 ring-1 ring-inset bg-containerBackgroundColor rounded-md border-none outline-none "
+                  className="py-[2px] md:py-1 w-[180px] md:w-[300px] md:ml-3 px-2 ring-1 ring-inset bg-containerBackgroundColor rounded-md border-none outline-none "
                   onChange={(e) => setSearchValue(e.target.value)}
                 />
                 {/* Search Icon */}
