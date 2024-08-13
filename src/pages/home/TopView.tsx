@@ -4,13 +4,30 @@ import BookMark from "./BookMark";
 import MovieDetail from "./MovieDetail";
 import { useDispatch } from "react-redux";
 import { changeActiveLink } from "../../redux/SetActiveLink";
+import { useEffect, useState } from "react";
+import { TopViewTypes } from "../../types/types";
+import { DotSpinner } from "@uiball/loaders";
 
 const TopView = () => {
   const dispath = useDispatch();
   const navigate = useNavigate();
+  const [topMovie, setTopMovie] = useState<Array<TopViewTypes>>([]);
+  useEffect(() => {
+    setTimeout(() => {
+      setTopMovie(topViewMovie);
+    }, 1000);
+  }, []);
+  if (topMovie.length === 0) {
+    return (
+      <div className="flex pt-20 flex-col justify-center gap-3 items-center">
+        <DotSpinner color="#f8eded" />
+        <p>Loading...</p>
+      </div>
+    );
+  }
   return (
     <div className="overflow-x-auto overflow-y-hidden flex flex-row space-x-4 m-2 md:m-4">
-      {topViewMovie.map((items) => (
+      {topMovie.map((items) => (
         <div key={items.id} className="relative mb-3 cursor-pointer">
           <BookMark items={items} />
           <div

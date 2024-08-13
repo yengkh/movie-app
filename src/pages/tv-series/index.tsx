@@ -4,15 +4,33 @@ import BookMark from "../home/BookMark";
 import MovieDetail from "../home/MovieDetail";
 import { useDispatch } from "react-redux";
 import { changeActiveLink } from "../../redux/SetActiveLink";
+import { useEffect, useState } from "react";
+import { TopViewTypes } from "../../types/types";
+import { DotSpinner } from "@uiball/loaders";
 
 const TVSeries = () => {
   const dispath = useDispatch();
   const navigate = useNavigate();
+  const [tvSeries, setTVSeries] = useState<Array<TopViewTypes>>([]);
+  useEffect(() => {
+    setTimeout(() => {
+      setTVSeries(TVSeriesImage);
+    }, 1000);
+  }, []);
+
+  if (tvSeries.length === 0) {
+    return (
+      <div className="flex pt-48 flex-col justify-center gap-3 items-center">
+        <DotSpinner color="#f8eded" />
+        <p>Loading...</p>
+      </div>
+    );
+  }
   return (
     <div className="px-2">
       <p>Movies</p>
       <div className="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-2 md:m-4">
-        {TVSeriesImage.map((items) => (
+        {tvSeries.map((items) => (
           <div key={items.id} className="relative cursor-pointer">
             <BookMark items={items} />
             <div

@@ -7,19 +7,35 @@ import BookMark from "./BookMark";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { changeActiveLink } from "../../redux/SetActiveLink";
+import { useEffect, useState } from "react";
+import { DotSpinner } from "@uiball/loaders";
 
 const RecommendMovie = () => {
   const dispath = useDispatch();
-  const allMovies: Array<TopViewTypes> = [
-    ...Movies,
-    ...topViewMovie,
-    ...TVSeriesImage,
-  ];
+  const [movieList, setMovieItem] = useState<Array<TopViewTypes>>([]);
+  useEffect(() => {
+    const allMovies: Array<TopViewTypes> = [
+      ...Movies,
+      ...topViewMovie,
+      ...TVSeriesImage,
+    ];
+    setTimeout(() => {
+      setMovieItem(allMovies);
+    }, 1000);
+  }, []);
   const navigate = useNavigate();
+  if (movieList.length === 0) {
+    return (
+      <div className="flex pt-48 flex-col justify-center gap-3 items-center">
+        <DotSpinner color="#f8eded" />
+        <p>Loading...</p>
+      </div>
+    );
+  }
   return (
     <>
       <div className="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-2 md:m-4">
-        {allMovies.map((items) => (
+        {movieList.map((items) => (
           <div key={items.id} className="relative cursor-pointer">
             <BookMark items={items} />
             <div

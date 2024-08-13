@@ -22,7 +22,9 @@ const DetailPage = () => {
         (movie) => movie.movie_name === decodeUrl
       );
       if (findMovieDetail.length > 0) {
-        setMovie(findMovieDetail);
+        setTimeout(() => {
+          setMovie(findMovieDetail);
+        }, 1000);
       } else {
         navigate("/error-page/");
       }
