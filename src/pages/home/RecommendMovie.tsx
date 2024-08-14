@@ -1,28 +1,24 @@
-import { Movies } from "../../assets/movies/movies";
-import { TopViewTypes } from "../../types/types";
-import { TVSeriesImage } from "../../assets/tvseries/tvseries";
-import { topViewMovie } from "../../assets/topview/topview";
 import MovieDetail from "./MovieDetail";
 import BookMark from "./BookMark";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { changeActiveLink } from "../../redux/SetActiveLink";
-import { useEffect, useState } from "react";
+import { TopViewTypes } from "../../types/types";
 import { DotSpinner } from "@uiball/loaders";
+import { useEffect } from "react";
 
-const RecommendMovie = () => {
-  const dispath = useDispatch();
-  const [movieList, setMovieItem] = useState<Array<TopViewTypes>>([]);
+type Props = {
+  movieList: TopViewTypes[];
+  currentPage: number;
+};
+
+const RecommendMovie = ({ movieList, currentPage }: Props) => {
   useEffect(() => {
-    const allMovies: Array<TopViewTypes> = [
-      ...Movies,
-      ...topViewMovie,
-      ...TVSeriesImage,
-    ];
     setTimeout(() => {
-      setMovieItem(allMovies);
-    }, 1000);
-  }, []);
+      window.scrollTo(0, 0);
+    }, 900);
+  }, [currentPage]);
+  const dispath = useDispatch();
   const navigate = useNavigate();
   if (movieList.length === 0) {
     return (
@@ -32,9 +28,10 @@ const RecommendMovie = () => {
       </div>
     );
   }
+
   return (
     <>
-      <div className="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-2 md:m-4">
+      <section className="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-2 md:m-4">
         {movieList.map((items) => (
           <div key={items.id} className="relative cursor-pointer">
             <BookMark items={items} />
@@ -56,7 +53,7 @@ const RecommendMovie = () => {
             </div>
           </div>
         ))}
-      </div>{" "}
+      </section>
     </>
   );
 };

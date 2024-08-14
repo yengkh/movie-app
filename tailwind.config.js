@@ -7,6 +7,7 @@ export default {
         bodyBackgroundColor: "#030637",
         textColor: "#f8eded",
         containerBackgroundColor: "#17153B",
+        activePaginationPage: "#1A4870",
       },
     },
   },

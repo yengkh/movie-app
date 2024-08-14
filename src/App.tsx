@@ -163,7 +163,7 @@ const App = () => {
             </div>
           </div>
           {/* Rout Page */}
-          <div className={`md:w-[74%] lg:w-[75%] md:pt-24`}>
+          <div className={`md:w-[75%] md:pt-24`}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/movie" element={<MovicePage />} />

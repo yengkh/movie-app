@@ -7,7 +7,12 @@ import { TopViewTypes } from "../types/types";
 import { Waveform } from "@uiball/loaders";
 import MovieDetailPath from "./MovieDetailPath";
 import RecommendMovie from "../pages/home/RecommendMovie";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux";
 const DetailPage = () => {
+  const getItems = useSelector(
+    (state: RootState) => state.recommentMoviListSlice.currentPage
+  );
   const getAllMovie: Array<TopViewTypes> = useMemo(
     () => [...Movies, ...topViewMovie, ...TVSeriesImage],
     []
@@ -65,7 +70,7 @@ const DetailPage = () => {
       </div>
       <div className="mt-5">
         <p>Similar movies</p>
-        <RecommendMovie />
+        <RecommendMovie currentPage={getItems} movieList={getAllMovie} />
       </div>
     </div>
   );

@@ -1,32 +1,35 @@
 import { useNavigate } from "react-router-dom";
-import { topViewMovie } from "../../assets/topview/topview";
 import BookMark from "./BookMark";
 import MovieDetail from "./MovieDetail";
 import { useDispatch } from "react-redux";
 import { changeActiveLink } from "../../redux/SetActiveLink";
-import { useEffect, useState } from "react";
-import { TopViewTypes } from "../../types/types";
 import { DotSpinner } from "@uiball/loaders";
+import { TopViewTypes } from "../../types/types";
+type Props = {
+  topMovie: TopViewTypes[];
+  currentPage: number;
+};
 
-const TopView = () => {
+const TopView = ({ topMovie, currentPage }: Props) => {
   const dispath = useDispatch();
   const navigate = useNavigate();
-  const [topMovie, setTopMovie] = useState<Array<TopViewTypes>>([]);
-  useEffect(() => {
+
+  if (currentPage > 1) {
+    return <div className=""></div>;
+  }
+
+  if (topMovie.length !== 0) {
     setTimeout(() => {
-      setTopMovie(topViewMovie);
-    }, 1000);
-  }, []);
-  if (topMovie.length === 0) {
-    return (
-      <div className="flex pt-20 flex-col justify-center gap-3 items-center">
-        <DotSpinner color="#f8eded" />
-        <p>Loading...</p>
-      </div>
-    );
+      return (
+        <div className="flex pt-20 flex-col justify-center gap-3 items-center">
+          <DotSpinner color="#f8eded" />
+          <p>Loading...</p>
+        </div>
+      );
+    }, 800);
   }
   return (
-    <div className="overflow-x-auto overflow-y-hidden flex flex-row space-x-4 m-2 md:m-4">
+    <section className="overflow-x-auto overflow-y-hidden flex flex-row space-x-4 m-2 md:m-4">
       {topMovie.map((items) => (
         <div key={items.id} className="relative mb-3 cursor-pointer">
           <BookMark items={items} />
@@ -46,7 +49,7 @@ const TopView = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
